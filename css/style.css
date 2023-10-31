@@ -114,4 +114,50 @@ img {
 .main-content {
   background-color: #99f6e4;
   display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 40px 30px;
+  gap: 30px;
+}
+
+.main-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  box-sizing: border-box;
+  height: 220px;
+  background-color: #f0fdfa;
+  border-radius: 10px;
+  border-left: 8px #B81426 solid;
+  padding: 40px 28px 40px 20px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.card h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.card p {
+  color: #666;
+}
+
+.card div {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 30px;
+  justify-content: end;
+}
+
+
+
+.projects {
+  grid-row: 1 / 3;
 }
