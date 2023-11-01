@@ -31,6 +31,7 @@
 
 .svg {
   place-self: center;
+  margin: 0;
 }
 
 .header {
@@ -48,34 +49,16 @@
 
 .header-top {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: min-content minmax(200px, 2fr) 1fr min-content min-content min-content;
+  gap: 30px;
   font-size: 1.2rem;
   justify-content: space-between;
-}
-
-.search {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: 30px;
-}
-
-.profile {
-  display: grid;
-  grid-template-columns: min-content min-content max-content;
-  gap: 30px;
-  justify-self: end;
 }
 
 .searchbox {
   background-color: #99f6e4;
   border-radius: 50px;
   height: 30px;
-  width: 600px;
-}
-
-.header-bottom {
-  display: grid;
-  grid-template-columns: 100px 1fr 360px;
 }
 
 img {
@@ -85,6 +68,11 @@ img {
 .header-top img {
   width: 50px;
   height: 50px;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 100px max-content minmax(30px, 1fr) 360px;
 }
 
 .header-bottom img {
@@ -115,12 +103,21 @@ img {
   background-color: #99f6e4;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 40px 30px;
   gap: 30px;
 }
 
 .main-content h3 {
   margin: 0 0 10px 0;
+}
+
+.main-content p {
+  color: #666;
+}
+
+.projects {
+  grid-row: 1 / 3;
 }
 
 .card-container {
@@ -131,7 +128,7 @@ img {
 
 .card {
   box-sizing: border-box;
-  height: 220px;
+  height: 250px;
   background-color: #f0fdfa;
   border-radius: 10px;
   border-left: 8px #B81426 solid;
@@ -145,10 +142,6 @@ img {
   margin: 0;
 }
 
-.card p {
-  color: #666;
-}
-
 .card div {
   display: grid;
   grid-template-columns: repeat(3, min-content);
@@ -156,8 +149,28 @@ img {
   justify-content: end;
 }
 
-
-
-.projects {
-  grid-row: 1 / 3;
+.announce-content,
+.trend-content {
+  background-color: #f0fdfa;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  display: grid;
+  align-items: center;
 }
+
+.announce-content {
+  grid-template-rows: repeat(5, max-content);
+}
+
+.announce-content p {
+  margin: 0;
+}
+
+.announce-content hr {
+  width: 100%;
+  margin: 15px 0;
+}
+
+
+
