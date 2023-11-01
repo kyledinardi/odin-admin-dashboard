@@ -103,7 +103,7 @@ img {
   background-color: #99f6e4;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: max-content 1fr;
   padding: 40px 30px;
   gap: 30px;
 }
@@ -152,15 +152,15 @@ img {
 .announce-content,
 .trend-content {
   background-color: #f0fdfa;
-  padding: 30px;
   border-radius: 10px;
-  font-size: 0.8rem;
   display: grid;
   align-items: center;
 }
 
 .announce-content {
   grid-template-rows: repeat(5, max-content);
+  font-size: 0.8rem;
+  padding: 30px;
 }
 
 .announce-content p {
@@ -172,5 +172,21 @@ img {
   margin: 15px 0;
 }
 
+.trend-content {
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+  padding: 20px;
+}
 
+.trend-content * {
+  margin: 0;
+}
 
+.trend-content h4 {
+  margin-bottom: 5px;
+}
+
+.trend-content img{
+  width: 50px;
+  height: 50px;
+}
